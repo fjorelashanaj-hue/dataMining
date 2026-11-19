@@ -1,0 +1,10 @@
+# Tekstet e abstrakteve dhe përgjigjet bruto të API-së nuk rishpërndahen
+data/private/
+# Çelësat API
+.env
+*.key
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/

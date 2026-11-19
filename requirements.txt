@@ -1,0 +1,11 @@
+# Projekti 06 – Java 2 (Python 3.10+)
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4          # fallback TF-IDF + kërkim me fjalë kyçe
+requests>=2.31             # Europe PMC API + LLM API
+sentence-transformers>=2.7 # model embeddings i gatshëm (shumëgjuhësh)
+faiss-cpu>=1.8             # indeksi vektorial
+networkx>=3.2              # DAG didaktik
+matplotlib>=3.8
+jupyter>=1.0
+pytest>=8.0

@@ -1,0 +1,36 @@
+{
+  "_shenim": "Zgjidhni ofruesin me active_provider ose me variablin e mjedisit LLM_PROVIDER. Baseline dhe RAG përdorin gjithmonë të njëjtin model dhe të njëjtat parametra 'generation'. Çelësi API NUK shkruhet këtu: vendoset si variabël mjedisi (p.sh. GROQ_API_KEY).",
+  "active_provider": "groq",
+  "generation": {
+    "temperature": 0.0,
+    "max_tokens": 300,
+    "top_p": 1.0,
+    "seed": 42
+  },
+  "providers": {
+    "groq": {
+      "base_url": "https://api.groq.com/openai/v1",
+      "model": "llama-3.1-8b-instant",
+      "api_key_env": "GROQ_API_KEY",
+      "kosto": "falas brenda limiteve të llogarisë (free tier); kontrolloni console.groq.com"
+    },
+    "openai": {
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-4o-mini",
+      "api_key_env": "OPENAI_API_KEY",
+      "kosto": "me pagesë sipas tokenëve; regjistrohen prompt_tokens/completion_tokens"
+    },
+    "ollama": {
+      "base_url": "http://localhost:11434/v1",
+      "model": "llama3.1:8b",
+      "api_key_env": "",
+      "kosto": "lokal, pa kosto API; kërkon 'ollama pull llama3.1:8b'"
+    },
+    "stub": {
+      "base_url": "",
+      "model": "stub_extractive",
+      "api_key_env": "",
+      "kosto": "0 – NUK është LLM, vetëm kontroll i tubacionit"
+    }
+  }
+}

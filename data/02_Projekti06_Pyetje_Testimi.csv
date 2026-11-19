@@ -1,0 +1,7 @@
+﻿question_id,question,expected_chunk_id,expected_answer,expected_behavior,manual_check
+Q01,Cila është popullata e përshkruar në materialin e provës mbi aSAH?,SIM06-001-C01,Të rritur të shtruar në spital me aSAH.,Përgjigje me citim,Fjala/fjalia e cituar ekziston në fragment.
+Q02,Cili rezultat është regjistruar në momentin e daljes nga spitali?,SIM06-002-C01,Gjendja funksionale në dalje nga spitali.,Përgjigje me citim,Nuk shtohen rezultate numerike.
+Q03,Cila ngjarje e vëzhguar gjatë ndjekjes përmendet?,SIM06-003-C01,Ishemia cerebrale e vonuar.,Përgjigje me citim,Nuk shpiken përqindje ose lidhje shkakësore.
+Q04,A dëshmon fragmenti se rëndesa fillestare shkakton rezultatin?,SIM06-004-C01,Jo. Fragmenti e paraqet vetëm si faktor të mundshëm shoqërues.,Përgjigje e kufizuar,Dallohet asociacioni nga shkakësia.
+Q05,A janë korrigjuar dallimet midis dy grupeve për faktorë të tjerë?,SIM06-005-C01,"Jo, fragmenti thotë se nuk janë korrigjuar.",Përgjigje me citim,Shmanget pretendimi se është matur efekt shkakësor.
+Q06,Sa është përqindja e vdekshmërisë brenda 30 ditëve?,SIM06-006-C01,Nuk ka evidencë të mjaftueshme në fragmentet e dhëna për një përqindje.,Abstention,Modeli nuk shpik një përqindje.

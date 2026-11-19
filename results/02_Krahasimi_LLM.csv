@@ -1,0 +1,97 @@
+corpus,run_id,question_id,question_text,prompt_id,variant,model_version,settings,sent_chunk_ids,prompt_text,output,error,latency_s,prompt_tokens,completion_tokens,heuristic_abstention,is_abstention,cited_ids,n_quotes,ids_valid,quotes_found,citation_check,expected_answer,expected_behavior,manual_check_instruction,manual_verdict,manual_note,timestamp
+SIM06,20261119-150628,Q01,Cila është popullata e përshkruar në materialin e provës mbi aSAH?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: Cila është popullata e përshkruar në materialin e provës mbi aSAH?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,False,False,,0,,,N/A – baseline kërkon LLM real (stub),Të rritur të shtruar në spital me aSAH.,Përgjigje me citim,Fjala/fjalia e cituar ekziston në fragment.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q01,Cila është popullata e përshkruar në materialin e provës mbi aSAH?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-001-C01;SIM06-005-C01;SIM06-007-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-001-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-001-C01] Në këtë abstrakt të sajuar për provë, popullata përfshin të rritur të shtruar në spital me aSAH. Regjistrohen mosha dhe gjendja fillestare, por nuk raportohet efekt i ndonjë trajtimi.
+[SIM06-005-C01] Ky përshkrim i sajuar mbi aSAH përmend dy grupe të ndjekura për periudha të ndryshme. Dallimet midis grupeve nuk janë korrigjuar për karakteristika të tjera dhe nuk lejohen përfundime shkakësore.
+[SIM06-007-C01] Shembulli sintetik aSAH përmend vlerësimin pas daljes nga spitali, por nuk përshkruan trajtimet, nuk jep efekte numerike dhe nuk përmban informacion për krahasim trajtimesh.
+
+Pyetja: Cila është popullata e përshkruar në materialin e provës mbi aSAH?","Sipas fragmentit: ""Në këtë abstrakt të sajuar për provë, popullata përfshin të rritur të shtruar në spital me aSAH."" [SIM06-001-C01]",,0.0,,,False,False,SIM06-001-C01,1,True,1/1,OK_AUTOMATIK (kërkon ende kontroll manual),Të rritur të shtruar në spital me aSAH.,Përgjigje me citim,Fjala/fjalia e cituar ekziston në fragment.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q02,Cili rezultat është regjistruar në momentin e daljes nga spitali?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: Cili rezultat është regjistruar në momentin e daljes nga spitali?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,False,False,,0,,,N/A – baseline kërkon LLM real (stub),Gjendja funksionale në dalje nga spitali.,Përgjigje me citim,Nuk shtohen rezultate numerike.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q02,Cili rezultat është regjistruar në momentin e daljes nga spitali?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-002-C01;SIM06-006-C01;SIM06-007-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-002-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-002-C01] Ky fragment demonstrues për aSAH thotë se rezultati i regjistruar është gjendja funksionale në dalje nga spitali. Nuk jepen madhësi efekti dhe as shifra krahasuese.
+[SIM06-006-C01] Në fragmentin e krijuar për demonstrim aSAH thuhet se mosha dhe gjendja funksionale u regjistruan. Nuk është raportuar përqindja e vdekshmërisë brenda 30 ditëve.
+[SIM06-007-C01] Shembulli sintetik aSAH përmend vlerësimin pas daljes nga spitali, por nuk përshkruan trajtimet, nuk jep efekte numerike dhe nuk përmban informacion për krahasim trajtimesh.
+
+Pyetja: Cili rezultat është regjistruar në momentin e daljes nga spitali?","Sipas fragmentit: ""Ky fragment demonstrues për aSAH thotë se rezultati i regjistruar është gjendja funksionale në dalje nga spitali."" [SIM06-002-C01]",,0.0,,,False,False,SIM06-002-C01,1,True,1/1,OK_AUTOMATIK (kërkon ende kontroll manual),Gjendja funksionale në dalje nga spitali.,Përgjigje me citim,Nuk shtohen rezultate numerike.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q03,Cila ngjarje e vëzhguar gjatë ndjekjes përmendet?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: Cila ngjarje e vëzhguar gjatë ndjekjes përmendet?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,False,False,,0,,,N/A – baseline kërkon LLM real (stub),Ishemia cerebrale e vonuar.,Përgjigje me citim,Nuk shpiken përqindje ose lidhje shkakësore.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q03,Cila ngjarje e vëzhguar gjatë ndjekjes përmendet?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-003-C01;SIM06-005-C01;SIM06-007-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-003-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-003-C01] Në një përmbledhje të trilluar mbi aSAH përmendet ishemia cerebrale e vonuar si ngjarje e vëzhguar gjatë ndjekjes. Nuk jepen frekuenca, përqindje ose marrëdhënie shkakësore.
+[SIM06-005-C01] Ky përshkrim i sajuar mbi aSAH përmend dy grupe të ndjekura për periudha të ndryshme. Dallimet midis grupeve nuk janë korrigjuar për karakteristika të tjera dhe nuk lejohen përfundime shkakësore.
+[SIM06-007-C01] Shembulli sintetik aSAH përmend vlerësimin pas daljes nga spitali, por nuk përshkruan trajtimet, nuk jep efekte numerike dhe nuk përmban informacion për krahasim trajtimesh.
+
+Pyetja: Cila ngjarje e vëzhguar gjatë ndjekjes përmendet?","Sipas fragmentit: ""Në një përmbledhje të trilluar mbi aSAH përmendet ishemia cerebrale e vonuar si ngjarje e vëzhguar gjatë ndjekjes."" [SIM06-003-C01]",,0.0,,,False,False,SIM06-003-C01,1,True,1/1,OK_AUTOMATIK (kërkon ende kontroll manual),Ishemia cerebrale e vonuar.,Përgjigje me citim,Nuk shpiken përqindje ose lidhje shkakësore.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q04,A dëshmon fragmenti se rëndesa fillestare shkakton rezultatin?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: A dëshmon fragmenti se rëndesa fillestare shkakton rezultatin?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,False,False,,0,,,N/A – baseline kërkon LLM real (stub),Jo. Fragmenti e paraqet vetëm si faktor të mundshëm shoqërues.,Përgjigje e kufizuar,Dallohet asociacioni nga shkakësia.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q04,A dëshmon fragmenti se rëndesa fillestare shkakton rezultatin?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-004-C01;SIM06-002-C01;SIM06-001-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-004-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-004-C01] Në shembullin didaktik aSAH, rëndesa e gjendjes në pranimin fillestar shënohet si faktor i mundshëm shoqërues i rezultateve. Fragmenti nuk provon se ky faktor i shkakton ato.
+[SIM06-002-C01] Ky fragment demonstrues për aSAH thotë se rezultati i regjistruar është gjendja funksionale në dalje nga spitali. Nuk jepen madhësi efekti dhe as shifra krahasuese.
+[SIM06-001-C01] Në këtë abstrakt të sajuar për provë, popullata përfshin të rritur të shtruar në spital me aSAH. Regjistrohen mosha dhe gjendja fillestare, por nuk raportohet efekt i ndonjë trajtimi.
+
+Pyetja: A dëshmon fragmenti se rëndesa fillestare shkakton rezultatin?","Sipas fragmentit: ""Fragmenti nuk provon se ky faktor i shkakton ato."" [SIM06-004-C01]",,0.0,,,False,False,SIM06-004-C01,1,True,1/1,OK_AUTOMATIK (kërkon ende kontroll manual),Jo. Fragmenti e paraqet vetëm si faktor të mundshëm shoqërues.,Përgjigje e kufizuar,Dallohet asociacioni nga shkakësia.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q05,A janë korrigjuar dallimet midis dy grupeve për faktorë të tjerë?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: A janë korrigjuar dallimet midis dy grupeve për faktorë të tjerë?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,False,False,,0,,,N/A – baseline kërkon LLM real (stub),"Jo, fragmenti thotë se nuk janë korrigjuar.",Përgjigje me citim,Shmanget pretendimi se është matur efekt shkakësor.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q05,A janë korrigjuar dallimet midis dy grupeve për faktorë të tjerë?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-005-C01;SIM06-004-C01;SIM06-001-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-005-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-005-C01] Ky përshkrim i sajuar mbi aSAH përmend dy grupe të ndjekura për periudha të ndryshme. Dallimet midis grupeve nuk janë korrigjuar për karakteristika të tjera dhe nuk lejohen përfundime shkakësore.
+[SIM06-004-C01] Në shembullin didaktik aSAH, rëndesa e gjendjes në pranimin fillestar shënohet si faktor i mundshëm shoqërues i rezultateve. Fragmenti nuk provon se ky faktor i shkakton ato.
+[SIM06-001-C01] Në këtë abstrakt të sajuar për provë, popullata përfshin të rritur të shtruar në spital me aSAH. Regjistrohen mosha dhe gjendja fillestare, por nuk raportohet efekt i ndonjë trajtimi.
+
+Pyetja: A janë korrigjuar dallimet midis dy grupeve për faktorë të tjerë?","Sipas fragmentit: ""Dallimet midis grupeve nuk janë korrigjuar për karakteristika të tjera dhe nuk lejohen përfundime shkakësore."" [SIM06-005-C01]",,0.0,,,False,False,SIM06-005-C01,1,True,1/1,OK_AUTOMATIK (kërkon ende kontroll manual),"Jo, fragmenti thotë se nuk janë korrigjuar.",Përgjigje me citim,Shmanget pretendimi se është matur efekt shkakësor.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q06,Sa është përqindja e vdekshmërisë brenda 30 ditëve?,p02_v1_baseline,baseline,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",,"Pyetja: Sa është përqindja e vdekshmërisë brenda 30 ditëve?
+
+Nëse nuk e di përgjigjen me siguri, shkruaj: ""Nuk ka evidencë të mjaftueshme"".",[stub] Baseline-i kërkon LLM real; pa fragmente stub-i nuk ka çfarë të thotë.,,0.0,,,"True R1: kërkohet shifër/përqindje, fragmentet nuk raportojnë asnjë",False,,0,,,N/A – baseline kërkon LLM real (stub),Nuk ka evidencë të mjaftueshme në fragmentet e dhëna për një përqindje.,Abstention,Modeli nuk shpik një përqindje.,,,2026-11-19T15:06:30
+SIM06,20261119-150628,Q06,Sa është përqindja e vdekshmërisë brenda 30 ditëve?,p02_v1_rag,RAG,stub_extractive (JO LLM),"{""provider"": ""stub (mungon GROQ_API_KEY)"", ""model"": ""stub_extractive (JO LLM)"", ""temperature"": 0.0, ""max_tokens"": 300, ""seed"": 42, ""top_p"": 1.0}",SIM06-006-C01;SIM06-002-C01;SIM06-003-C01,"Përgjigju VETËM duke u mbështetur te fragmentet më poshtë.
+Rregulla:
+1. Pas çdo pohimi shëno ID-në e fragmentit në kllapa katrore, p.sh. [SIM06-006-C01].
+2. Për çdo pohim jep një citim të shkurtër fjalë për fjalë nga fragmenti, brenda thonjëzave ""..."", në gjuhën origjinale të fragmentit.
+3. Nëse fragmentet nuk e përmbajnë përgjigjen, shkruaj vetëm: ""Nuk ka evidencë të mjaftueshme"".
+4. Mos shto informacion që nuk është në fragmente.
+
+Fragmentet:
+[SIM06-006-C01] Në fragmentin e krijuar për demonstrim aSAH thuhet se mosha dhe gjendja funksionale u regjistruan. Nuk është raportuar përqindja e vdekshmërisë brenda 30 ditëve.
+[SIM06-002-C01] Ky fragment demonstrues për aSAH thotë se rezultati i regjistruar është gjendja funksionale në dalje nga spitali. Nuk jepen madhësi efekti dhe as shifra krahasuese.
+[SIM06-003-C01] Në një përmbledhje të trilluar mbi aSAH përmendet ishemia cerebrale e vonuar si ngjarje e vëzhguar gjatë ndjekjes. Nuk jepen frekuenca, përqindje ose marrëdhënie shkakësore.
+
+Pyetja: Sa është përqindja e vdekshmërisë brenda 30 ditëve?",Nuk ka evidencë të mjaftueshme.,,0.0,,,"True R1: kërkohet shifër/përqindje, fragmentet nuk raportojnë asnjë",True,,0,,,ABSTENTION,Nuk ka evidencë të mjaftueshme në fragmentet e dhëna për një përqindje.,Abstention,Modeli nuk shpik një përqindje.,,,2026-11-19T15:06:30
